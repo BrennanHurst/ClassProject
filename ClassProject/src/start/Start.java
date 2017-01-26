@@ -10,5 +10,6 @@ public class Start {
 		JFrameStart jf = new JFrameStart();
 		
 		System.out.println("This is the second commit c");
+	}
 jj
 }
