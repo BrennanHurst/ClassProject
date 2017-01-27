@@ -1,7 +1,5 @@
 package jframe;
 
-import java.awt.Color;
-
 import javax.swing.JFrame;
 
 import references.Reference;
@@ -12,16 +10,17 @@ public class JFrameStart extends JFrame{
 	 * 
 	 */
 	private static final long serialVersionUID = 2559895613322769476L;
-	
+	private ContentPane cp;
 	
 	public JFrameStart()
 	{
-		
 		this.setup();
 	}
 	
-	
-	
+	public ContentPane getContentPane()
+	{
+		return this.cp;
+	}
 	/**
 	 * Sets up the dimensions of the Jframe
 	 * @since V 0.1
@@ -30,10 +29,11 @@ public class JFrameStart extends JFrame{
 	{
 		this.setSize(Reference.JFRAMEWIDTH, Reference.JFRAMEHEIGHT);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		
+		this.setTitle(Reference.VERSION);
+		this.setResizable(true);
 		//Define and set standardized content panes
-		this.setContentPane(new ContentPane());
 		
+		this.setContentPane(cp = new ContentPane());
 		this.setVisible(true); 
 	}
 }
