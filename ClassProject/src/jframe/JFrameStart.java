@@ -16,7 +16,6 @@ public class JFrameStart extends JFrame{
 	
 	public JFrameStart()
 	{
-		
 		this.setup();
 	}
 	
