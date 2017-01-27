@@ -6,28 +6,25 @@ import java.awt.Graphics;
 
 import references.Reference;
 
-public class ContentPane extends Container{
+/*public class ContentPane extends Container{
 
 	
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -1873954675198355591L;
-
+/*	private static final long serialVersionUID = -1873954675198355591L;
+	private Manager manager;
 	public ContentPane()
 	{
-		BaseCanvas baseCanvas = new BaseCanvas();
-		baseCanvas.setBounds(0, 0, Reference.JFRAMEWIDTH, Reference.JFRAMEHEIGHT);
-		baseCanvas.setBackground(Color.BLACK);
-		this.add(baseCanvas);
-	}
-	public void paint(Graphics g)
-	{
-		
+		manager = new Manager();
+		manager.setBounds(0, 0, Reference.JFRAMEWIDTH, Reference.JFRAMEHEIGHT);
+		manager.setBackground(Color.BLACK);
+		this.add(manager);
 	}
 	
-	public void repaint()
+	public Manager getManager()
 	{
-		
+		return this.manager;
 	}
+	
 }
